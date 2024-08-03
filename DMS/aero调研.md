@@ -1,6 +1,9 @@
-# 需要回答的几个问题
+
+
+# Aero项目调研报告
+
 ### 和uniswap,curve相比的优势
-同为ve33模型和curve相比，aero的tvl只有curve的1/4，但是盈利是curve的两倍
+同为ve模型和curve相比，aero的tvl只有curve的1/4，但是盈利是curve的两倍
 ![image.png](https://upload-images.jianshu.io/upload_images/29534666-73a413278e1add02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![image.png](https://upload-images.jianshu.io/upload_images/29534666-b81c6e151c564745.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -45,7 +48,7 @@ curve
 ```
 fdv:593.79M
 mcap:325.98M
-revenue: 34m
+revenue: 34m 
 revenue/fdv=34m/593.79M=0.057
 ```
 aero:
@@ -55,6 +58,18 @@ mcap:449.74m
 revenue:78.17m
 revenue/fdv=78.17m/950.04m=0.082
 ```
+
+
+
+因为curve币价相对稳定，所以用curve的收益数据和fdv数据，对aero币价进行了一下调整回归。
+
+考虑到三个月后的通胀水平，使用参数0.75对币价进行稀释。
+
+```
+（revenue(aero)/revenue(curve)） *  （fdv(curve) /fdv(aero) ） *0.75/ Tokenprice(aero)=78.17m/34m  * 593.79M/950.04m *0.75/0.8=2.3 * 0.625 *0.75 * 0.8=0.8625$
+```
+
+> 所以可以得出结论：以目前0.8的价格买入aero是一个风险很低的价位。
 
 参考一下curve的价格曲线，ve模型常见的走势，拉盘->爆砸->价值发现后出现平盘，对于像aero这样通胀的代币，项目初期不适合大仓位的上，不然很容易被套。所以在接下来的三个月里面可以采取定投的策略买入，降低被套的风险，在第64周具体的治理策略出来之后在决定要不要上大仓位。
 ![curve币价走势](https://upload-images.jianshu.io/upload_images/29534666-201282a943fd829b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
